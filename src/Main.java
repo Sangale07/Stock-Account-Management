@@ -1,8 +1,28 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Stock Management Code");
+        Scanner scanner = new Scanner(System.in);
+        StockPortfolio portfolio = new StockPortfolio();
+
+        System.out.print("Enter the number of stocks: ");
+        int n = scanner.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter stock name: ");
+            String name = scanner.next();
+            System.out.print("Enter number of shares: ");
+            int numberOfShares = scanner.nextInt();
+            System.out.print("Enter share price: ");
+            double sharePrice = scanner.nextDouble();
+
+            Stock stock = new Stock(name, numberOfShares, sharePrice);
+            portfolio.addStock(stock);
+        }
+
+        portfolio.printReport();
     }
 }
 class Stock{
