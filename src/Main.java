@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Stock Management Code");
@@ -26,5 +28,16 @@ class Stock{
     }
     public double calculateValue() {
         return numberOfShares * sharePrice;
+    }
+}
+class StockPortfolio {
+    private ArrayList<Stock> stocks;
+
+    public StockPortfolio() {
+        stocks = new ArrayList<>();
+    }
+
+    public void addStock(Stock stock) {
+        stocks.add(stock);
     }
 }
