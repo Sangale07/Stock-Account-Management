@@ -13,4 +13,15 @@ class Stock{
         this.numberOfShares = numberOfShares;
         this.sharePrice = sharePrice;
     }
+    public String getName() {
+        return name;
+    }
+
+    public int getNumberOfShares() {
+        return numberOfShares;
+    }
+
+    public double getSharePrice() {
+        return sharePrice;
+    }
 }
