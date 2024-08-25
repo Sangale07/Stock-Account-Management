@@ -47,4 +47,17 @@ class StockPortfolio {
         }
         return totalValue;
     }
+    public void printReport() {
+        System.out.println("Stock Report:");
+        System.out.println("-------------");
+        for (Stock stock : stocks) {
+            double value = stock.calculateValue();
+            System.out.printf("Stock Name: %s, Number of Shares: %d, Share Price: %.2f, Value: %.2f%n",
+                    stock.getName(), stock.getNumberOfShares(), stock.getSharePrice(), value);
+        }
+        double totalValue = calculateTotalValue();
+        System.out.println("-------------");
+        System.out.printf("Total Value of Portfolio: %.2f%n", totalValue);
+    }
+
 }
