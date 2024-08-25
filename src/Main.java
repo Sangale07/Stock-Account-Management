@@ -40,4 +40,11 @@ class StockPortfolio {
     public void addStock(Stock stock) {
         stocks.add(stock);
     }
+    public double calculateTotalValue() {
+        double totalValue = 0;
+        for (Stock stock : stocks) {
+            totalValue += stock.calculateValue();
+        }
+        return totalValue;
+    }
 }
