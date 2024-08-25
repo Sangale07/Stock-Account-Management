@@ -24,4 +24,7 @@ class Stock{
     public double getSharePrice() {
         return sharePrice;
     }
+    public double calculateValue() {
+        return numberOfShares * sharePrice;
+    }
 }
